@@ -1,58 +1,14 @@
-# EternalJukebox
-
-The source files for the EternalJukebox, a rehosting of the Infinite Jukebox.  
-This repo contains everything you need to host the EternalJukebox on your own server!  
-
-You can visit the official site [here](https://eternal.abimon.org/), in case you want to mess around with it without doing all the hard stuff.  
-
-# Documentation
-
 ## Prerequisites
 
 ### Java:
-##### Windows
-Download and install Java from https://www.java.com/en/download/  
-##### Debian-based Linux distributions
-For Ubuntu or Debian-based distributions execute `sudo apt-get install default-jre` in the terminal   
-##### Fedora and CentOS
-There is a tutorial for installing java on Fedora and CentOS at https://www.digitalocean.com/community/tutorials/how-to-install-java-on-centos-and-fedora   
 
 ### Youtube-dl:
-##### Windows
-Download the .exe at https://yt-dl.org/latest/youtube-dl.exe and place it in `C:\Windows\`
+
 ##### Linux
 Use these commands in the terminal to install youtube-dl on Linux:  
 `sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl`   
 `sudo chmod a+rx /usr/local/bin/youtube-dl`
 
-## Getting the project files:
-### Windows
-There are two ways to get the files depending on what you prefer:
-###### Without git 
-You can download the zip directly [here](https://github.com/UnderMybrella/EternalJukebox/archive/master.zip), then extract them in any folder you like (e.g. `C:\EternalJukebox`)
-
-###### Using git
-First download and install [Git for Windows](https://git-scm.com/downloads).
-After that, open the Command Prompt and move to a folder you'd like to have the server files in.
-For example you can type `CD C:\Github\` (Folder has to exist)
-
-Then you can just use the command `git clone https://github.com/UnderMybrella/EternalJukebox.git` and the files should download to the folder you executed the command in.
-
-### Linux
-On Linux there is also two ways to get the files depending on what you prefer:
-###### Without git
-First off, if you have a desktop environment you can just download the zip with the files directly [here](https://github.com/UnderMybrella/EternalJukebox/archive/master.zip) and extract them in a folder you like.
-If you're running in a headless environment (one without a display), you can download the zip using `wget https://github.com/UnderMybrella/EternalJukebox/archive/master.zip`.
-Git, however, is recommended as you don't need to extract the ZIP and can switch branches easily.
-
-###### Using git
-You can generally install Git tools through the package-management tool that comes with your linux distribution.   
-
-For example on **Fedora** you can use `sudo dnf install git-all`  
-And on **Debian/Ubuntu** you can use `sudo apt-get install git-all`  
-
-After that you can move to a folder you'd like to keep the files using the `cd` command and then clone EternalJukebox to it with:  
-`git clone https://github.com/UnderMybrella/EternalJukebox.git`  
 
 #### Prebuilt jar
 Unless you want to build the jar yourself with Gradle you need to download it here https://eternal.abimon.org/built.jar and place it in the folder containing `default-config.json` and `jukebox_index.html`
@@ -103,11 +59,11 @@ you should now be able to connect to it with a browser through http://localhost:
 
 Congrats you did it!  
 
-## Building with gradle (for those who want to): 
+## Building with gradle (for those who want to):
 Firstly ofcourse you need to install gradle.  
 There is a full documentation on how to do this here https://gradle.org/install  
 
-Open a Command Prompt as Administrator or Terminal on linux and move to the folder you cloned the project files to earlier. 
+Open a Command Prompt as Administrator or Terminal on linux and move to the folder you cloned the project files to earlier.
 E.g. `cd C:\EternalJukebox`  
 
 Now use the command `gradle clean shadowJar`
